@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:500,600,700&family=Roboto+Mono:200&display=swap");
+@import url("balloon.css");
+
+:root {
+--nav-bg-color: #12141D;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+button {
+    font-family: "Inter", sans-serif;
+    appearance: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.half-wrapper {
+    flex-grow: 1;
+    flex-basis: 1;
+}
+
+.wrapper {
+    background: var(--nav-bg-color);
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.sw-nav {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    font-size: .875rem;
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+.sw-nav-left, .sw-nav-right {
+    display: flex;
+    align-items: stretch;
+}
+
+.sw-nav-brand {
+    display: inline-block;
+    height: 36px;
+    margin-right: 12px;
+}
+
+.sw-nav-brand img {
+    height: 100%
+}
+
+.sw-nav-account-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    margin: 0 3px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 50%;
+    line-height: 1em;
+    color: #fff;
+    background: #4d8af0;
+    background: linear-gradient(50deg, #4d8af0 0%, #265fdd 100%);
+}
+
+.sw-nav-item {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    height: 36px;
+    padding: 0 10px;
+    margin: 0 3px;
+    color: #fff;
+    font-size: .875rem;
+    line-height: 1rem;
+    font-weight: 500;
+    background-color: var(--nav-bg-color);
+    border: 2px solid var(--nav-bg-color);
+}
+
+.sw-nav-item:hover {
+    background: #2d2e41;
+    border-color: #2d2e41;
+}
+
+.sw-nav-item-alt {
+    border-color: #2d2e41;
+}
+
+.sw-nav-item-icon {
+    display: inline-block;
+    height: 24px;
+    pointer-events: none;
+    margin: 0 -3px;
+}
+
+.sw-nav-item-icon svg {
+    height: 100%;
+    width: auto;
+}
+
+.sw-nav-item-icon path {
+    fill: #84889a;
+}
+
+.sw-nav-item-icon:hover path {
+    fill: #fff;
+}
+
+/* Nav Dropdown */
+
+.sw-nav-dropdown {
+    position: relative;
+}
+
+.sw-nav-dropdown-show > button {
+    background: #2d2e41 !important;
+    color: #fff !important;
+    border-radius: 5px;
+}
+
+.sw-nav-dropdown-show path {
+    fill: #fff !important;
+}
+
+.sw-nav-dropdown-show .sw-nav-dropdown-content {
+    display: block !important;
+}
+
+.sw-nav-dropdown-content {
+    position: absolute;
+    background: #2d2e41;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 3px;
+    display: none;
+}
+
+.sw-nav-dropdown-item {
+    display: flex;
+    align-items: center;
+    font-size: .875rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.sw-nav-dropdown-item:hover {
+    background: #434560;
+}
+
+.sw-nav-dropdown-item-icon {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 15px;
+    width: 22px;
+    display: none;
+}
+
+.sw-nav-dropdown-item-icon svg {
+    width: 100%;
+    height: auto;
+}
+
+.sw-nav-dropdown-item-icon path {
+    fill: #84889a;
+}
+
+.dropdown-divider {
+    border-top: 1px solid;
+    border-color: #383d52;
+    padding: 0;
+    margin: 5px 0;
+}
+
+/* Account Card */
+
+.sw-account-card {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.sw-account-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+}
+
+.sw-account-name {
+    font-weight: 600;
+}
+
+.sw-account-email {
+    font-size: .75rem;
+    color: #84889a;
+}
