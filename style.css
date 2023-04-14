@@ -114,6 +114,10 @@ a {
     border-color: #2d2e41;
 }
 
+.sw-nav-item:hover .sw-nav-item-icon path {
+    fill: #fff;
+}
+
 .sw-nav-item-alt {
     border-color: #2d2e41;
 }
