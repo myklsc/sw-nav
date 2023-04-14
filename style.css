@@ -39,6 +39,10 @@ a {
     text-decoration: none;
 }
 
+a,button {
+    
+}
+
 .half-wrapper {
     flex-grow: 1;
     flex-basis: 1;

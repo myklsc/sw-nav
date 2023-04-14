@@ -2,7 +2,7 @@
     --balloon-border-radius: 5px;
     --balloon-color: #434560;
     --balloon-text-color: #fff;
-    --balloon-font-size: 12px;
+    --balloon-font-size: .875rem;
     --balloon-move: 4px; }
   
   button[aria-label][data-balloon-pos] {
@@ -20,13 +20,14 @@
       font-weight: 500;
       font-style: normal;
       text-shadow: none;
+      line-height: 1.4rem;
       font-size: var(--balloon-font-size);
       background: var(--balloon-color);
       border-radius: 2px;
       color: var(--balloon-text-color);
       border-radius: var(--balloon-border-radius);
       content: attr(aria-label);
-      padding: .5em 1em;
+      padding: .45em .875em;
       position: absolute;
       white-space: nowrap;
       z-index: 10; }
