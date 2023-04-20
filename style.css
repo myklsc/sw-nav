@@ -292,7 +292,8 @@ button {
 }
 
 .sw-nav-mobile-footer {
-  padding: 15px 20px 25px;
+  padding: 20px;
+  background: #28293c;
 }
 
 .sw-nav-mobile-button {
