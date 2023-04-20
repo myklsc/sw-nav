@@ -194,7 +194,7 @@ button {
 }
 
 .sw-nav-dropdown-item:hover {
-  background: #434560;
+  background: #383c52;
   cursor: pointer;
 }
 
@@ -275,7 +275,6 @@ button {
   height: 100%;
   width: 100%;
   max-width: 300px;
-  padding: 25px;
   box-sizing: border-box;
   background: #2d2e41;
 }
@@ -283,16 +282,17 @@ button {
 .sw-nav-mobile-header {
   display: flex;
   align-items: center;
+  padding: 25px;
 }
 
 .sw-nav-mobile-body {
   flex-grow: 1;
   overflow-y: auto;
-  padding: 25px 0;
+  padding: 0 20px;
 }
 
 .sw-nav-mobile-footer {
-  padding: 15px 0 0;
+  padding: 15px 20px 25px;
 }
 
 .sw-nav-mobile-button {
@@ -354,7 +354,7 @@ button {
   }
 
   .sw-account-card.closed {
-    background: #2d2e41;
+    background: none;
   }
 
   .sw-account-card.closed svg {
@@ -363,7 +363,7 @@ button {
 
   .sw-nav-item-alt {
     border-color: #383c52;
-    background: #2d2e41;
+    background: none;
     margin: 0;
     width: 100%;
     justify-content: center;
