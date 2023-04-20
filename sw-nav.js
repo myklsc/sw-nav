@@ -1,10 +1,15 @@
 // Get all dropdown buttons and contents
-var dropdownBtns = document.querySelectorAll('.sw-nav-dropdown > button');
-var dropdownContents = document.querySelectorAll('.sw-nav-dropdown > .sw-nav-dropdown-content');
+const dropdownBtns = document.querySelectorAll('.sw-nav-dropdown > button');
+const dropdownContents = document.querySelectorAll('.sw-nav-dropdown > .sw-nav-dropdown-content');
 
-// Get the account trigger and account wrapper elements
-var accountTrigger = document.querySelector("[data-nav='sw-nav-mobile-account-trigger']");
-var accountWrapper = document.querySelector("[data-nav='sw-nav-mobile-account-wrapper']");
+// Get the mobile nav, trigger, and backdrop elements using their data-nav attribute values
+const mobileNav = document.querySelector('[data-nav="mobile-nav"]');
+const mobileNavTrigger = document.querySelector('[data-nav="mobile-nav-trigger"]');
+const mobileNavBackdrop = document.querySelector('[data-nav="mobile-nav-backdrop"]');
+
+// Get the mobile nav account trigger and account wrapper elements
+const accountTrigger = document.querySelector("[data-nav='sw-nav-mobile-account-trigger']");
+const accountWrapper = document.querySelector("[data-nav='sw-nav-mobile-account-wrapper']");
 
 // Add event listener to all dropdown buttons
 dropdownBtns.forEach(function (dropdownBtn, index) {
@@ -24,15 +29,18 @@ dropdownBtns.forEach(function (dropdownBtn, index) {
   });
 });
 
-// Add event listener to the document
-document.addEventListener('click', function (event) {
-  // Check if the clicked element is not a dropdown button or content
-  if (!event.target.matches('.sw-nav-dropdown > button') && !event.target.matches('.sw-nav-dropdown > .sw-nav-dropdown-content *')) {
-    // Remove the 'sw-nav-dropdown-show' class from all dropdowns
-    dropdownContents.forEach(function (dropdownContent) {
-      dropdownContent.parentNode.classList.remove('sw-nav-dropdown-show');
-    });
-  }
+// Add a click event listener to the mobileNavTrigger element
+mobileNavTrigger.addEventListener('click', function () {
+  // When clicked, add the "active" class to both the mobileNav and mobileNavBackdrop elements
+  mobileNav.classList.add('active');
+  mobileNavBackdrop.classList.add('active');
+});
+
+// Add a click event listener to the mobileNavBackdrop element
+mobileNavBackdrop.addEventListener('click', function () {
+  // When clicked, remove the "active" class from both the mobileNav and mobileNavBackdrop elements
+  mobileNav.classList.remove('active');
+  mobileNavBackdrop.classList.remove('active');
 });
 
 // Add event listener to the account trigger element
@@ -41,4 +49,3 @@ accountTrigger.addEventListener('click', function () {
   accountTrigger.classList.toggle('closed');
   accountWrapper.classList.toggle('closed');
 });
-

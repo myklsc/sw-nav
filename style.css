@@ -268,15 +268,22 @@ button {
 
 .sw-nav-mobile {
   position: absolute;
+  z-index: 999;
   top: 0;
   left: 0;
   display: none;
   flex-direction: column;
   height: 100%;
-  width: 100%;
-  max-width: 300px;
+  width: 300px;
   box-sizing: border-box;
   background: #2d2e41;
+  transform: translateX(-300px);
+  transition: transform .25s; ease-in;
+}
+
+.sw-nav-mobile.active {
+    transform: translateX(0px);
+    transition: transform .25s; ease-out;
 }
 
 .sw-nav-mobile-header {
@@ -298,6 +305,24 @@ button {
 
 .sw-nav-mobile-button {
   display: none;
+}
+
+.sw-nav-mobile-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(230, 13%, 9%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease-out;
+}
+
+.sw-nav-mobile-backdrop.active {
+    opacity: .4;
+    pointer-events: all;
+    transition: opacity .25s ease-in;
 }
 
 /* Mobile Account Links - Collapsible */
