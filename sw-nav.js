@@ -32,8 +32,8 @@ dropdownBtns.forEach(function (dropdownBtn, index) {
 // Add a click event listener to the mobileNavTrigger element
 mobileNavTrigger.addEventListener('click', function () {
   // When clicked, add the "active" class to both the mobileNav and mobileNavBackdrop elements
-  mobileNav.classList.add('active');
-  mobileNavBackdrop.classList.add('active');
+  mobileNav.classList.toggle('active');
+  mobileNavBackdrop.classList.toggle('active');
 });
 
 // Add a click event listener to the mobileNavBackdrop element

@@ -68,7 +68,7 @@ button {
 .wrapper {
   background: var(--nav-bg-color);
   position: relative;
-  z-index: 2;
+  z-index: 999;
 }
 
 .container {
@@ -326,6 +326,7 @@ button {
 
 .sw-nav-mobile-backdrop {
   position: fixed;
+  z-index: 998;
   top: 0;
   left: 0;
   width: 100vw;
