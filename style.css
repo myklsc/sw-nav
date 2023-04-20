@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
@@ -23,17 +27,16 @@ body {
 
   display: flex;
   flex-direction: column;
-  height: 100vh;
 
-    width: 100vw;
-height: 100vh;
-min-height: -webkit-fill-available;
-overscroll-behavior-y: none;
+  width: 100vw;
+  height: 100%;
+  min-height: -webkit-fill-available;
+  overscroll-behavior-y: none;
 }
 
 main {
-    position: relative;
-    flex-grow: 1;
+  position: relative;
+  flex-grow: 1;
 }
 
 button {
@@ -55,8 +58,8 @@ button {
 }
 
 .half-wrapper {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   flex-basis: 1;
   position: relative;
@@ -292,12 +295,12 @@ button {
   box-sizing: border-box;
   background: #2d2e41;
   transform: translateX(-300px);
-  transition: transform .25s; ease-in;
+  transition: transform 0.25s ease-in;
 }
 
 .sw-nav-mobile.active {
-    transform: translateX(0px);
-    transition: transform .25s; ease-out;
+  transform: translateX(0px);
+  transition: transform 0.25s ease-out;
 }
 
 .sw-nav-mobile-header {
@@ -322,21 +325,21 @@ button {
 }
 
 .sw-nav-mobile-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: hsl(230, 13%, 9%);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .25s ease-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(230, 13%, 9%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-out;
 }
 
 .sw-nav-mobile-backdrop.active {
-    opacity: .4;
-    pointer-events: all;
-    transition: opacity .25s ease-in;
+  opacity: 0.4;
+  pointer-events: all;
+  transition: opacity 0.25s ease-in;
 }
 
 /* Mobile Account Links - Collapsible */
